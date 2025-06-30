@@ -35,5 +35,4 @@ num = Number.parseInt(num)
 if (num>5){
     // location.href = "https://github.com/rahulksah10"  => this will work in browser only node.js doesn't  support
     console.log("Redirect to: https://github.com/rahulksah10");
-
 }
