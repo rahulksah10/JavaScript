@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InnerHTml</title>
+  </head>
+  <body>
+    <span id="first">i am span</span>
+    
+  <script>
+
+    let x = document.getElementsByTagName("span")[0];
+    console.log(x);
+    let y = document.getElementsByTagName("span")[0];
+    // dir show all the elements
+    console.dir(y);
+
+    console.log(document.body.firstChild.nodeName);
+    console.log(document.body.firstElementChild.nodeName);
+    
+    first.innerHTMl  = " hey how are you"
+    console.log(first.innerHTMl);
+    console.log(first.outerHTMl);
+    
+    console.log(document.body.textContent);
+
+  </script>
+  </body>
+
+</html>

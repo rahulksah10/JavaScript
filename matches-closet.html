@@ -6,10 +6,28 @@
     <title>Matches - closet -Contains</title>
 </head>
 <body>
-     <div class="box" id="id1">This is element 1</div>
+     <div class="box" id="id1">This is element 1 <span id="sp1">span 1</span>
+    </div>
      <div class="box" id="id2">This is element 2</div>
-    <script>
 
+    <script>
+         let id1 = document.getElementById("id1")
+         let sp1 = document.getElementById("sp1")
+         
+         // matches
+
+         console.log(id1.matches(".class"));
+         console.log(id1.matches(".box"));
+
+         //closet - it will check define elemnt is from thier anccestor
+         console.log(sp1.closest("#sp1")); // return span only
+         console.log(sp1.closest(".box")); //return box element
+
+        //  contains - return true if element 1 is in element 2 , if element 1 is element2 (elem1==elem2) then true otherwise u know
+
+        console.log(id1.contains(sp1));
+        console.log(sp1.contains(sp1));
+        console.log(sp1.contains(id1));
     </script>
 </body>
 </html>

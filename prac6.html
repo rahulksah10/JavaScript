@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px; 
+        padding: 0px;
+    }
+</style>
+<body >
+    <!-- question 1 change the color of firstelement child -->
+    <nav style=" background-color: rgb(58, 25, 114); padding: 8px; ">
+        <ul style="display:flex; ">
+            <li style=" list-style: none; padding: 0 20px;">home </li>
+            <li style=" list-style: none; padding: 0 20px;">about </li>
+            <li style=" list-style: none; padding: 0 20px;">contact </li>
+        </ul>
+    </nav>
+    <!--question 2 check it is using table body or not in the view source page-->
+    <table>
+        <td>hello1</td>
+        <td>hello2</td>
+        <td>hello3</td>
+        <td>hello4</td>
+        <td>hello5</td>
+    </table>
+
+    <script>
+        //question 1 change the color of firstelement child
+        document.getElementsByTagName("nav")[0].firstElementChild.style.color = "red"
+
+
+        // created elements & change the last & first element color
+
+        document.getElementsByTagName("nav")[0].firstElementChild.style.color = "green"
+        document.getElementsByTagName("nav")[0].lastElementChild.style.color = "green"
+
+        //change the background of all <li> tags
+        Array.from(document.getElementsByTagName("li")).forEach((element) => {
+            element.style.background ="cyan";
+        })
+    </script>
+</body>
+</html>
