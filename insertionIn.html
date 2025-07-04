@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html insertion</title>
+</head>
+<body>
+    <div class="container">
+        I am start of this container (inner)
+        <div id="first" class="one"> i am first Element</div>
+        I am last of this container(inner)
+        <!-- <div id="second" class="two"> i am first Element</div>
+        <div id="third" class="three"> i am first Element</div> -->
+    </div>
+
+    <script>
+         let a = document.getElementsByTagName('div')[0];
+        
+
+         let div = document.createElement('div');
+         div.innerHTML = '<h1> Hello World </h1>';
+        //  a.appendChild(div);
+        //  a.append(div); //should be at last
+        //  a.prepend(div);  // should be at start
+
+        a.replaceWith(div); // it will erase & replace define node (div)
+    </script>
+</body>
+</html>
