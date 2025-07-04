@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class name & List</title>
+</head>
+<style>
+    .yellow{
+        background-color: yellow;
+        color: white;
+    }
+    .red{
+        background-color: red;
+        color: white;
+    }
+    .text-dark{
+        color: black;
+    }
+</style>
+<body>
+    <div id="first" class="red text-dark">
+        <span>Hey i am good</span>
+    </div>
+
+    <script>
+        first.className = "text-black red"
+        first.classList.add("red");
+        first.classList.remove("red");
+        first.classList.contains("red");
+        first.classList.toggle("red");
+    </script>
+</body>
+</html>
