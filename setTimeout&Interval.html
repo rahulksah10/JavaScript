@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>set timeout & set interval</title>
+  </head>
+  <body>
+    <div>Hello World</div>
+
+    <script>
+      document.write("Hello");
+      // set time out - excute once
+      const sum = (a, b) => {
+        console.log("Yes i am running: " + (a, b));
+        a + b;
+      };
+      setTimeout(sum, 2000, 1, 2);
+
+      // let a = setTimeout(function(){
+      //     alert("I am inside of settimeout")
+
+      // },5000)
+      // let b = prompt("Do you want to run the setTimeout?");
+      // if ("n" == b) {
+      //     clearTimeout(a)
+
+      // }
+      //  console.log(a);
+
+      //setinterval - excute everysetTime
+      // setInterval(function() {
+      //     alert("Yes i am setinterval")
+      // }, 8000)
+
+      let set = (z, x) => {
+        console.log("Yup I'm running", z + x);
+        z + x;
+      };
+      setInterval(set, 8000, 4, 5);
+    </script>
+  </body>
+</html>
