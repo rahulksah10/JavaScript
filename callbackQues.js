@@ -24,3 +24,17 @@ function delayedMessage(message, delay, callback) {
 delayedMessage("Hello after 2 seconds", 2000, function() {
   console.log("Callback executed.");
 });
+
+
+// 🔹 Write a custom forEach function using callbacks
+
+
+function myForEach(arr, callback) {
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i], i, arr);
+  }
+}
+
+myForEach([10, 20, 30], function(value, index) {
+  console.log(index + ": " + value);
+});
