@@ -38,3 +38,17 @@ function myForEach(arr, callback) {
 myForEach([10, 20, 30], function(value, index) {
   console.log(index + ": " + value);
 });
+
+
+// Convert a callback-based function into arrow function
+
+
+const greet = (name, callback) => {
+  console.log("Hi " + name);
+  callback();
+};
+
+greet("Rahul", () => {
+  console.log("Callback function is called.");
+});
+
