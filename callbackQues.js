@@ -8,3 +8,19 @@ function add(a, b, callback) {
 add(5, 3, function(result) {
   console.log("The sum is: " + result);  // Output: The sum is: 8
 });
+
+
+
+// 🔹Callback example using setTimeout
+
+
+function delayedMessage(message, delay, callback) {
+  setTimeout(() => {
+    console.log(message);
+    callback();
+  }, delay);
+}
+
+delayedMessage("Hello after 2 seconds", 2000, function() {
+  console.log("Callback executed.");
+});
