@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <div>Promise
+        <p>A Promise is an object that represents the future result of an asynchronous operation. It’s a way to handle asynchronous code without falling into callback hell.</p>
+        <ul style="color: rgb(129, 129, 145);">
+            <li>Avoids callback hell</li>
+        <li>Easier error handling</li>
+        <li>Can be chained (.then().then()...)</li>
+        <li>Works beautifully with async/await</li>
+        </ul>
+    </div>
+    <script> 
+    // let promise;
+        let Promise = new promise(function(resolve, result){
+            alert("Hello")
+            resolve(56)
+        })
+        console.log("Hello 2");
+
+        setTimeout(function(){
+            console.log("Hello in 3 seconds");
+        }, 3000)
+
+        console.log("My name is" + "Hello 4");
+    </script>
+</body>
+</html>

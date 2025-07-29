@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Hell</title>
+  </head>
+  <body>
+    <div>
+      <hgroup>
+        <h1>Callback Hell</h1>
+        <p>
+          Callback hell (also known as "Pyramid of Doom") happens in JavaScript
+          when you have multiple nested callback functions, leading to code
+          that's hard to read, debug, and maintain.
+        </p>
+      </hgroup>
+      <div>
+        <h2 style="color: red;">Problems with Callback Hell</h2>
+        <ul>
+        <li> Hard to read and maintain</li>
+        <li>Difficult to debug</li>
+        <li>Error handling becomes messy</li>
+        <li>Scalability issues</li>
+      </ul>
+      </div>
+    </div>
+    <script>
+      //   function loadscript(src, Callback) {
+      //     var script = document.createElement("script");
+      //     script.src = src;
+      //     script.onload = function () {
+      //       console.log("Loaded script with SRC:", src);
+      //       Callback(null, src);
+      //     };
+      //     script.onerror = function () {
+      //       console.log("Error loading script with src: " + src);
+      //       Callback(new Error("Src got some error"));
+      //     };
+      //     document.body.appendChild(script);
+      //   }
+
+      //   function greet() {
+      //     alert("How are you");
+      //   }
+      //   function bye(error, src) {
+      //     if (error) {
+      //       console.log(error);
+      //       sendEmeregencymessageToCeo();
+      //       return;
+      //     }
+      //     alert("Good to see you");
+      //   }
+      //   loadscript(
+      //     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js",
+      //     bye
+      //   );
+
+      function doTask1(callback) {
+        setTimeout(() => {
+          console.log("Task 1 complete");
+          callback(null, "result1");
+        }, 1000);
+      }
+
+      function doTask2(input, callback) {
+        setTimeout(() => {
+          console.log("Task 2 complete");
+          callback(null, "result2");
+        }, 1000);
+      }
+
+      function doTask3(input, callback) {
+        setTimeout(() => {
+          console.log("Task 3 complete");
+          callback(null, "result3");
+        }, 1000);
+      }
+
+      // Now call them (your code)
+      doTask1(function (err, result1) {
+        if (err) {
+          console.error("Error in Task 1");
+        } else {
+          doTask2(result1, function (err, result2) {
+            if (err) {
+              console.error("Error in Task 2");
+            } else {
+              doTask3(result2, function (err, result3) {
+                if (err) {
+                  console.error("Error in Task 3");
+                } else {
+                  console.log("All done!");
+                }
+              });
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
