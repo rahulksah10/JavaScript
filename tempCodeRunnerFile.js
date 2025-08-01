@@ -1,2 +1,6 @@
-.map(num => num * 2)           
-//   .reduce((acc, curr) => acc + curr, 0); 
+// const newarr = arr.map(triple);
+// // console.log(newarr);
+
+// const newarr4 = arr.map(binary);
+
+// console.log(newarr4);
